@@ -34,12 +34,18 @@ let addNote = (title, body) => {
 };
 
 let getAll = () => {
-  console.log('Getting all notes');
-}
+  return fetchNotes();
+};
 
 let readNote = (title) => {
 
-}
+};
+
+let logNote = (note) => {
+  console.log('-------');
+  console.log(`Title: ${note.title}`);
+  console.log(`Body: ${note.body}`);
+};
 
 let removeNote = (title) => {
   let notes = fetchNotes();
@@ -53,6 +59,7 @@ module.exports = {
   addNote,
   getAll,
   readNote,
-  removeNote
+  removeNote,
+  logNote
 };
 
